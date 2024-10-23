@@ -66,19 +66,8 @@ public abstract class BoardItem {
     }
 
     public abstract void revertStatus();
-        /*if (this.status != INITIAL_STATUS) {
-            setStatus(Status.values()[status.ordinal() - 1]);
-        } else {
-            this.logEvent(String.format("Can't revert, already at %s", this.getStatus()));
-        }*/
-
 
     public abstract void advanceStatus();
-        /*if (this.status != FINAL_STATUS) {
-            setStatus(Status.values()[status.ordinal() + 1]);
-        } else {
-            this.logEvent(String.format("Can't advance, already at %s", this.getStatus()));
-        }*/
 
     public String viewInfo() {
         return String.format("'%s', [%s | %s]", title, status, dueDate);
