@@ -14,7 +14,6 @@ public class Task extends BoardItem {
 
         ensureValidAssignee(assignee);
         this.assignee = assignee;
-        this.logEvent(String.format("Item created: %s", this.viewInfo()));
     }
 
     public String getAssignee() {
@@ -51,7 +50,7 @@ public class Task extends BoardItem {
     public void advanceStatus() {
         if (getStatus() != Status.VERIFIED) {
             setStatus(Status.values()[getStatus().ordinal() + 1]);
-            this.logEvent(String.format("Status changed from %s to %s", Status.values()[getStatus().ordinal() - 1], getStatus()));
+            this.logEvent(String.format("Task status changed from %s to %s", Status.values()[getStatus().ordinal() - 1], getStatus()));
         } else {
             this.logEvent(String.format("Can't advance, already at %s", getStatus()));
         }

@@ -23,7 +23,7 @@ public class Board {
         return items.size();
     }
 
-    void displayHistory() {
+    public void displayHistory() {
         for (BoardItem item : items ) {
             item.displayHistory();
         }

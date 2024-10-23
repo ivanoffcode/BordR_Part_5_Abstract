@@ -28,7 +28,7 @@ public abstract class BoardItem {
         this.status = status;
         this.dueDate = dueDate;
 
-        /*this.logEvent(String.format("Item created: %s", this.viewInfo()));*/
+        logEvent(String.format("Item created: %s", this.viewInfo()));
     }
 
     public Status getStatus() {

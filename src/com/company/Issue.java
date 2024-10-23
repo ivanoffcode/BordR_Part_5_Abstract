@@ -15,7 +15,6 @@ public class Issue extends BoardItem {
         } else {
             this.description = description;
         }
-        this.logEvent(String.format("Item created: %s", this.viewInfo()));
     }
 
     public String getDescription() {
